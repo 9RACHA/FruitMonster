@@ -1,7 +1,8 @@
 # FruitMonster
 
 Crear en Unity un videojuego en 2D llamado FruitMonster. El objetivo del juego es recolectar el
-mayor número de frutas posible de entre las que van apareciendo en la pantalla. (10 puntos).
+mayor número de frutas posible de entre las que van apareciendo en la pantalla. 
+
 Boca del monstruo
 En el juego debe aparecer un círculo que representa la boca del monstruo de la fruta y que es el
 punto que capturará fruta al pulsar la tecla espacio. Este círculo se crea a partir del sprite
@@ -13,6 +14,7 @@ Prefabs de fruta
 Se deber incorporar al proyecto el sprite fruit.png, que debe ser dividido en 4 frames, de 78 x 78
 pixeles. Se crearán cuatro prefab de frutas a partir de cada uno de estos frames, que serán los usados
 para el espaneo de las frutas de las que se habla en el siguiente párrafo.
+
 Espaneo de frutas
 Al espanear una fruta esta se colocará en el punto de espaneo, que estará situado en algún lugar de
 la circunferencia de radio 4 con centro en el origen. Para ello el punto de espaneo de las frutas se
@@ -25,6 +27,7 @@ Cada vez que se espanee una fruta se deberá escoger aleatoriamente, de forma eq
 los cuatro prefabs disponibles.
 Se espaneará una fruta al comenzar el juego y, a partir de ahí, cada vez que se capture la fruta de la
 pantalla se espaneará otra nueva, como se explica más abajo.
+
 Captura de frutas
 Cuando el jugador presione la tecla espaciadora se calculará la diferencia entre el ángulo de
 posición del propio MonsterMouth y el ángulo de posición de la fruta. Si esta diferencia, en valor
@@ -35,14 +38,13 @@ jugador, mostrándose además la nueva puntuación por consola.
 Si la diferencia es mayor de 4 grados se considerará un fallo por lo que se mantendrá la fruta en su
 lugar, se reproducirá el sonido fail.mp3 y se descontará 1 de las vidas del jugador, mostrándose la
 nueva cuenta por consola.
+
 Puntuación.
 La puntuación variará según el tipo de fruta capturada. La ciruela valdrá 3 puntos, la manzana 4, el
 melocotón 5 y la naranja 6. Además si entre una captura y la siguiente transcurre menos de 0.8
 segundos, la puntuación se multiplicará por dos.
 La puntuación se mostrará, usando OnGUI(), en la esquina superior derecha.
 Al alcanzar la puntuación de 100 se premiará con una vida adicional.
-IES Muralla Romana Curso 2022-2023 Lugo
-P.M.V.
 Aceleración del movimiento.
 Por cada 50 puntos alcanzados la velocidad de giro de la boca del monstruo se incrementará en 20
 grados/segundo, aumentando así progresivamente la dificultad del juego.
@@ -51,6 +53,7 @@ La cuenta de vidas comenzará en 3 y cuando llegue a 0 se entrará en la condici
 por lo que el círculo que representa la boca del monstruo se parará, no respondiéndose además a las
 pulsaciones de la tecla espacio.
 La cuenta de vidas se mostrará, usando OnGUI(), en la esquina superior izquierda.
+
 RECURSOS SUMINISTRADOS
 Nombre del recurso Tipo Uso / se aplica a
 mostermouth.png Imagen / Sprite Sprite para la boca del monstruo.
